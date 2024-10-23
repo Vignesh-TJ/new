@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class="w-100 mt-3 d-flex  justify-content-center align-items-center ">
+        <div class="p-1 outer bg-dark text-white text-center">
+            <h1 >calculator</h1>
+            <div class="d-flex">
+                <input  type="text" id="screen" class="m-1" placeholder="0" readonly> 
+            </div><br>
+            <input class="one" type="button" value="7" onclick="cli(value)">
+            <input class="one" type="button" value="8" onclick="cli(value)">
+            <input class="one" type="button" value="9" onclick="cli(value)">
+            <input class="one" type="button" value="+" onclick="cli(value)">
+
+           
+            <br>
+            <input class="one" type="button" value="4" onclick="cli(value)">
+            <input class="one" type="button" value="5" onclick="cli(value)">
+            <input class="one" type="button" value="6" onclick="cli(value)">
+            <input class="one" type="button" value="-" onclick="cli(value)">
+
+            <br>
+            <input class="one"  type="button" value="1" onclick="cli(value)">
+            <input class="one" type="button" value="2" onclick="cli(value)">
+            <input class="one" type="button" value="3" onclick="cli(value)">
+            <input class="one" type="button" value="*" onclick="cli(value)">
+
+             <br>
+             <input class="on" type="button" onclick="cle()" value="AC">
+             <input class="one" type="button" value="0" onclick="cli(value)">
+             <input class="one" type="button" value="=" onclick="sum()">
+             <input class="one" type="button" value="/" onclick="cli(value)"><br> <input class="one" type="button" value="." onclick="cli(value)">
+             <input class="on" type="button" value="del" onclick="bk()">
+
+
+ 
+
+        </div>
+    </div>
+    <script>
+        var scr=document.getElementById('screen')
+        function cli(value){
+                scr.value=scr.value+value
+           
+            
+        }
+        function sum(){
+           try{
+            scr.value=eval(scr.value)
+            if(scr.value=='undefined'){
+                scr.value='error'
+                setTimeout(()=>{
+                    scr.value==''
+                },1000)
+            }
+           }
+            catch{
+                scr.value='error'
+                setTimeout(()=>{
+                    scr.value=''
+                },1000)
+            }
+            
+   
+        }
+        function cle(){
+            scr.value=""
+        }
+     
+        function bk(){
+         sc=scr.value
+         scr.value=sc.slice(0,-1)
+        }
+    </script>
+    
+</body>
+</html>

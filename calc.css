@@ -1,0 +1,63 @@
+
+input:hover{
+    
+    color:red;
+    border: 2px solid rgb(255, 255, 255);
+    transition: 0.7s;
+    background: #000;
+}
+#screen{
+    color: green;
+    font-weight: 900;
+    border: 2px solid green;
+    border-radius: 10px;
+    font-size: 15px;
+   
+}
+.one{
+    border: 2px solid rgb(8, 8, 8);
+    margin-bottom: 5px;
+    padding: 10px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-style: bold;
+    background:red;
+}
+.outer{
+    border-radius: 10px;
+    border: 2px solid orange;
+}
+#del{
+    display: flex;
+    position: absolute;
+    right: 31px;
+    top: 65px;
+    border-radius: 0 10px 10px 0;
+background: red;
+
+}
+#del:hover{
+    background: red;
+    color: black;
+    transition: 2s;
+}
+.on{
+background: #000;
+color: red;
+border: 2px solid rgb(255, 255, 255);
+    margin-bottom: 5px;
+    padding: 10px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-style: bold;
+
+}
+.on:hover{
+background: red;
+color:  black;
+border: 2px solid black;
+}
